@@ -1,0 +1,9 @@
+.calc {
+    margin: auto;
+    padding: 5px;
+    border: solid 1px gainsboro;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 160px;
+}
