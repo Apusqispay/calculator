@@ -1,8 +1,8 @@
-import Button from "../../calc/Button/Button";
-import { inputExp, calculateResult } from "../../../reducers/computingReducer";
+import Button from "../../Button/Button";
+import { inputExp, calculateResult } from "../../../../reducers/computingReducer";
 import { useContext } from "react";
-import differential from "../../../functions/differential"
-import { ContestedState } from "../../calc/Calc";
+import differential from "../../../../functions/differential"
+import { ContestedState } from "../../Calc";
 import style from "./arithmetickeys.module.css";
 
 const ArithmeticKeys = (props) => {

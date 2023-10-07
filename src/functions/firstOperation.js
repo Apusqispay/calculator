@@ -16,7 +16,7 @@ const firstOperation = secondOpResult => {
         break;
         case 'r': firstOpResult = Math.sqrt(Number(secondOpResult.a));
         break;
-        case 'd': firstOpResult = Math.pow(Number(secondOpResult.a), Number(secondOpResult.b));
+        case 'd': firstOpResult = Number(secondOpResult.a)**Number(secondOpResult.b);
         break;
         case 'calculated': firstOpResult = secondOpResult.result;
         break;

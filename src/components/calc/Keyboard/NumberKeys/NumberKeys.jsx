@@ -1,5 +1,5 @@
-import Button from "../../calc/Button/Button";
-import { inputExp } from "../../../reducers/computingReducer";
+import Button from "../../Button/Button";
+import { inputExp } from "../../../../reducers/computingReducer";
 import style from "./numberkeys.module.css"
 
 const NumberKeys =(props) => {

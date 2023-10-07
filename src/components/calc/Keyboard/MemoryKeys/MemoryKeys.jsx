@@ -1,5 +1,5 @@
-import Button from "../../calc/Button/Button";
-import { saveMemory, readMemory, plusMemory, minusMemory, clearMemory } from "../../../reducers/computingReducer";
+import Button from "../../Button/Button";
+import { saveMemory, readMemory, plusMemory, minusMemory, clearMemory } from "../../../../reducers/computingReducer";
 import style from "./memorykeys.module.css"
 
 const MemoryKeys = (props) => {

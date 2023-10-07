@@ -1,5 +1,5 @@
-import Button from "../../calc/Button/Button";
-import { clear, allClear } from "../../../reducers/computingReducer";
+import Button from "../../Button/Button";
+import { clear, allClear } from "../../../../reducers/computingReducer";
 import style from "./controlkeys.module.css"
 
 const ControlKeys = (props) => {
