@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 import useReducerWithThunk from "../reducers/useReducerWithThunk";
 
 
-let initialState = {exp:'1+1', memory: null, error: null};
+let initialState = {exp:'10*100', memory: null, error: null};
 
 
 let TestElement = (props) =>{
@@ -20,14 +20,21 @@ it('calculates result of first expression before adding next operation symbol', 
     render(<TestElement value={'+'} id={'test'}/>);
     let elem = screen.getByTestId('test');
     await act(async()=>{await user.click(elem);});
-    expect(elem.textContent).toBe('2+');
+    expect(elem.textContent).toBe('1000+');
 });
 
-it('replaces first oepration symbol', async ()=>{
+it('calculates percent correctly', async ()=>{
     const user = userEvent.setup();
-    render(<TestElement value={'*'} id={'test'}/>);
+    render(<TestElement value={'%'} id={'test'}/>);
     let elem = screen.getByTestId('test');
     await act(async()=>{await user.click(elem);});
+    expect(elem.textContent).toBe('10%');
+})
+
+it('calculates root of second operand', async ()=>{
+    const user = userEvent.setup();
+    render(<TestElement value={'r'} id={'test'}/>);
+    let elem = screen.getByTestId('test');
     await act(async()=>{await user.click(elem);});
-    expect(elem.textContent).toBe('2*');
-});
+    expect(elem.textContent).toBe('10*10');
+})

@@ -1,5 +1,5 @@
 import calculate from "../functions/calculate";
-import addOneSymbol from "../functions/addOneSymbol";
+import inputExpression from "../functions/inputExpression";
 
 const CLEAR = 'CLEAR';
 const ALLCLEAR = 'ALLCLEAR';
@@ -27,7 +27,7 @@ const computingReducer = (state, action) => {
             memory: null,
         };
 
-        case INPUT: if(state.error) break; return addOneSymbol(state, action.value);
+        case INPUT: if(state.error) break; return inputExpression(state, action.value);
 
         case SAVEMEMORY: if(state.error) break; dump = calculate(state.exp); if(dump===ERROR)   return {...state, error: ERROR};
                                                                                                 return {...state, exp: dump, memory: dump};

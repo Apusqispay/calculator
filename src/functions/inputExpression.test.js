@@ -1,4 +1,4 @@
-import addOneSymbol from "./addOneSymbol";
+import addOneSymbol from "./inputExpression";
 
 it('forbids zero at beginning of number', () => {
     expect(addOneSymbol({exp: '0', error: null, memory: null}, '0')).toStrictEqual({exp: '0', error: null, memory: null});

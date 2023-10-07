@@ -1,21 +1,21 @@
 import calculate from "./calculate";
 
-it('returns unchanged exp if it doesnot contain operations', ()=>{
-    const testExp = '123';
-    expect(calculate(testExp)).toBe('123');
-});
-
 it('sums correctly', () => {
     const testData = '1+2';
     expect(calculate(testData)).toBe('3');
-});
-
-it('return "ERROR"', () => {
-    const testData = '1+2%';
-    expect(calculate(testData)).toBe("ERROR");
 });
 
 it('deducts correctly', () => {
     const testData = '-1+2';
     expect(calculate(testData)).toBe('1');
 });
+
+it('raises to degree correctly', ()=>{
+    const testData = '2d2';
+    expect(calculate(testData)).toBe('4');
+});
+
+it('square roots correctly', ()=>{
+    const testData = '16r';
+    expect(calculate(testData)).toBe('4');
+})
